@@ -42,10 +42,11 @@ struct ContentView: View {
                         .focused($amountIsFocused)
                     
                     Picker("Anzahl Personen", selection: $anzahlPersonen) {
-                        ForEach(2..<100) {
+                        ForEach(1..<4) {
                             Text("\($0) people")
                         }
                     }
+                    .pickerStyle(.segmented)
                 }
                 Section {
                     Picker("Prozentual", selection: $trinkgeldProzentual) {
